@@ -6,7 +6,9 @@ namespace Yose
     {
         static void Main(string[] args)
         {
-            Console.Out.WriteLine("Hello World!");
+            new Server().Start();
+            Console.Out.WriteLine("Server started");
+            Console.ReadLine();
         }
     }
 }
