@@ -1,7 +1,6 @@
 ﻿using NUnit.Framework;
 using SimpleBrowser;
 using Yose.TestHelpers;
-using Yose.Web;
 
 namespace Yose.World1
 {
@@ -14,7 +13,7 @@ namespace Yose.World1
         public void LandingPage()
         {
             browser = new Browser();
-            Visit("/");  
+            browser.Visit("/");  
         }
 
         [Test]
@@ -27,16 +26,6 @@ namespace Yose.World1
         public void ContainsALinkToThePingChallenge()
         {
             Assert.That(browser.Find("a", FindBy.Id, "ping-challenge-link").Exists);
-        }
-
-        private void Visit(string url)
-        {
-            browser.ClearException();
-            browser.Navigate(Server.Uri + url);
-            if (browser.LastWebException != null)
-            {
-                Assert.Fail("Page non trouvée : " + url + "\n" + browser.LastWebException);   
-            }                
         }
     }
 }

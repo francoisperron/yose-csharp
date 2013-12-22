@@ -64,6 +64,8 @@
     <Compile Include="Nancy\NancyConfigurationsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestHelpers\ServerTest.cs" />
+    <Compile Include="TestHelpers\Visiting.cs" />
+    <Compile Include="World1\ContactInformationChallengeWebTest.cs" />
     <Compile Include="World1\LandingPageChallengeWebTest.cs" />
     <Compile Include="World1\PingChallengeApiTest.cs" />
   </ItemGroup>
