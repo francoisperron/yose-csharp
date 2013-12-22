@@ -68,6 +68,7 @@
     <Compile Include="World1\ContactInformationChallengeWebTest.cs" />
     <Compile Include="World1\LandingPageChallengeWebTest.cs" />
     <Compile Include="World1\PingChallengeApiTest.cs" />
+    <Compile Include="World1\ShareChallengeWebTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
