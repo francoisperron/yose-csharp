@@ -2,7 +2,7 @@
 
 namespace Yose.World1
 {
-    public class AliveEndpoint : Nancy.NancyModule
+    public class AliveEndpoint : NancyModule
     {
         public AliveEndpoint()
         {

@@ -1,19 +1,21 @@
 using System.Net;
 using NUnit.Framework;
 using RestSharp;
+using Yose.Web;
 
 namespace Yose.World1
 {
     [TestFixture]
-    class PingChallengeApiTest
+    class PingChallengeApiTest : ServerTest
     {
         private IRestResponse<AliveResponse> response;
 
         [TestFixtureSetUp]
-        public void Setup()
+        public void PingServer()
         {
-            StartServer();
-            response = PingServer();
+            var restClient = new RestClient(Server.Uri);
+            var request = new RestRequest("/ping", Method.GET) { RequestFormat = DataFormat.Json };
+            response = restClient.Execute<AliveResponse>(request);
         }
 
         [Test]
@@ -26,18 +28,6 @@ namespace Yose.World1
         public void ReturnsAliveTrue()
         {
             Assert.That(response.Data.alive, Is.True);
-        }
-
-        private void StartServer()
-        {
-            new Server().Start();
-        }
-
-        private static IRestResponse<AliveResponse> PingServer()
-        {
-            var restClient = new RestClient(string.Format("http://{0}:{1}", Server.Host, Server.Port));
-            var request = new RestRequest("/ping", Method.GET) {RequestFormat = DataFormat.Json};
-            return restClient.Execute<AliveResponse>(request);
         }
     }
 }
