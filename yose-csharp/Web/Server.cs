@@ -31,7 +31,7 @@ namespace Yose.Web
     {
         public string GetRootPath()
         {
-            return AppDomain.CurrentDomain.BaseDirectory + "views";
+            return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "views");
         }
     }
 }

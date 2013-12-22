@@ -1,6 +1,7 @@
 using NUnit.Framework;
+using Yose.Web;
 
-namespace Yose.Web
+namespace Yose.TestHelpers
 {
     public abstract class ServerTest
     {

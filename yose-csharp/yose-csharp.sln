@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yose-csharp", "yose-csharp.csproj", "{7A4B8BFC-B167-45F4-B9A7-30C4ACACBE31}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yose-csharp-test", "..\yose-csharp-test\yose-csharp-test.csproj", "{150792DC-C483-400A-BE20-B1EE5FF1AC62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7A4B8BFC-B167-45F4-B9A7-30C4ACACBE31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A4B8BFC-B167-45F4-B9A7-30C4ACACBE31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A4B8BFC-B167-45F4-B9A7-30C4ACACBE31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{150792DC-C483-400A-BE20-B1EE5FF1AC62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{150792DC-C483-400A-BE20-B1EE5FF1AC62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{150792DC-C483-400A-BE20-B1EE5FF1AC62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{150792DC-C483-400A-BE20-B1EE5FF1AC62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,7 @@
 using System.Net;
 using NUnit.Framework;
 using RestSharp;
+using Yose.TestHelpers;
 using Yose.Web;
 
 namespace Yose.World1
