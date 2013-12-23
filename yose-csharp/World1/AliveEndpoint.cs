@@ -9,9 +9,4 @@ namespace Yose.World1
             Get["/ping"] = _ => Response.AsJson(new AliveResponse {alive = true});
         }
     }
-
-    public class AliveResponse
-    {
-        public bool alive { get; set; }
-    }
 }
