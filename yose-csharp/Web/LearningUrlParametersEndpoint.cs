@@ -1,4 +1,6 @@
-﻿using Nancy;
+﻿using System;
+using System.Collections.Generic;
+using Nancy;
 
 namespace Yose.Web
 {
@@ -24,9 +26,25 @@ namespace Yose.Web
         {
             Get["/learningQuery"] = _ =>
             {
-                Name = Request.Query.name;
+                Name = Request.Query;
                 return Name;
             };
+        }
+    }
+
+    public class LearningMultipleQueryParametersEndpoint : NancyModule
+    {
+        public static string Names = null;
+
+        public LearningMultipleQueryParametersEndpoint()
+        {
+            Get["/learningMultipleQuery"] = Render;
+        }
+
+        private string Render(dynamic parameters)
+        {
+            Names = Request.Query.name;
+            return Names;
         }
     }
 }

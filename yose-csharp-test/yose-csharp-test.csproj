@@ -72,6 +72,7 @@
     <Compile Include="World1\PingChallengeApiTest.cs" />
     <Compile Include="World1\ShareChallengeWebTest.cs" />
     <Compile Include="World2\GuardChallengesTest.cs" />
+    <Compile Include="World2\MultipleEntriesChallengeApiTest.cs" />
     <Compile Include="World2\PowerOfTwoChallengeApiTest.cs" />
     <Compile Include="World2\PrimeFactorsTest.cs" />
   </ItemGroup>
