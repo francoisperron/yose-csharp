@@ -1,17 +1,22 @@
-﻿using Nancy;
-
-namespace Yose.World2
+﻿namespace Yose.World2
 {
-    public class PrimeFactorsEndpoint : NancyModule
+    public class PrimeFactorsEndpoint
     {
-        public PrimeFactorsEndpoint()
+        public object Get(string request)
         {
-            Get["/primeFactors"] = parameters =>
+            int number;
+            if (IsNotANumber(request, out number))
             {
-                var number = Request.Query.number;
-                var decomposition = PrimeFactors.Of(number);
-                return Response.AsJson(new PrimeFactorsDecomposition {number = number, decomposition = decomposition});
-            };
+                return new PrimeFactorsError{number = request, error = "not a number"};
+            }
+            
+            var decomposition = PrimeFactors.Of(number);
+            return new PrimeFactorsDecomposition { number = number, decomposition = decomposition };
+        }
+
+        private static bool IsNotANumber(string request, out int number)
+        {
+            return !int.TryParse(request, out number);
         }
     }
 }

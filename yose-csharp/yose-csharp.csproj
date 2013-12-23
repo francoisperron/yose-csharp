@@ -70,12 +70,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Web\LearningUrlParametersEndpoint.cs" />
     <Compile Include="Web\Server.cs" />
-    <Compile Include="World1\AliveEndpoint.cs" />
+    <Compile Include="World1\AliveNancyEndpoint.cs" />
     <Compile Include="World1\AliveResponse.cs" />
-    <Compile Include="World1\LandingPageEndpoint.cs" />
+    <Compile Include="World1\LandingPageNancyEndpoint.cs" />
     <Compile Include="World2\PrimeFactors.cs" />
     <Compile Include="World2\PrimeFactorsDecomposition.cs" />
     <Compile Include="World2\PrimeFactorsEndpoint.cs" />
+    <Compile Include="World2\PrimeFactorsError.cs" />
+    <Compile Include="World2\PrimeFactorsNancyEndpoint.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

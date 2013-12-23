@@ -2,9 +2,9 @@
 
 namespace Yose.World1
 {
-    public class LandingPageEndpoint : NancyModule
+    public class LandingPageNancyEndpoint : NancyModule
     {
-        public LandingPageEndpoint()
+        public LandingPageNancyEndpoint()
         {
             Get["/"] = _ => View["index.html"];
         }

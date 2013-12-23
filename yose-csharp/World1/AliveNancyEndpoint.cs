@@ -2,9 +2,9 @@
 
 namespace Yose.World1
 {
-    public class AliveEndpoint : NancyModule
+    public class AliveNancyEndpoint : NancyModule
     {
-        public AliveEndpoint()
+        public AliveNancyEndpoint()
         {
             Get["/ping"] = _ => Response.AsJson(new AliveResponse {alive = true});
         }
