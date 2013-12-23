@@ -3,10 +3,12 @@
 <head>
     <title>prime-factors</title>
 </head>
-<body>
-    <div id="title">Prime factors</div>
-    <div id="invitation">Enter a number to decompose</div>
-    <input id="number"/>
-    <button id="go">GO</button>
-</body>
+    <body>
+        <form method="GET" action="/primeFactors/result">
+            <div id="title">Prime factors</div>
+            <div id="invitation">Enter a number to decompose</div>
+            <input id="number" type="text" name="number"/>
+            <button id="go">GO</button>
+        </form>
+    </body>
 </html>
