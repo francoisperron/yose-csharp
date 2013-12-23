@@ -18,7 +18,7 @@ namespace Yose.World2
             Get["/primeFactors/result"] = _ =>
             {
                 PrimeFactorsDecomposition decomposition = new PrimeFactorsEndpoint().Get(Request.Query.number);
-                var result = String.Join(", ", decomposition.decomposition.ToArray());
+                var result = Request.Query.number + " = " + String.Join(" x ", decomposition.decomposition.ToArray());
                 return View["primeFactorsResult.html", result];
             };
         }

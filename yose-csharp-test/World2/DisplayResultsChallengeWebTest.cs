@@ -20,7 +20,7 @@ namespace Yose.World2
         {
             browser.Find("number").Value = "15";
             browser.Find("go").Click();
-            Assert.That(browser.Find("result").Value, Is.EqualTo("3, 5"));
+            Assert.That(browser.Find("result").Value, Is.EqualTo("15 = 3 x 5"));
         }
     }
 }
