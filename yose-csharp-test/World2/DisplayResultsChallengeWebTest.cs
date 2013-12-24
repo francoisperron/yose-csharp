@@ -38,5 +38,13 @@ namespace Yose.World2
             browser.Find("go").Click();
             Assert.That(browser.Find("result").Value, Is.EqualTo("hello is not a number"));
         }
+
+        [Test]
+        public void DisplaysSmallerThanZeroErrorMessage()
+        {
+            browser.Find("number").Value = "-42";
+            browser.Find("go").Click();
+            Assert.That(browser.Find("result").Value, Is.EqualTo("-42 is not an integer > 1"));
+        }
     }
 }
