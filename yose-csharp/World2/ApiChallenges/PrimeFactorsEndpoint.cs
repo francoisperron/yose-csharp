@@ -1,4 +1,4 @@
-﻿namespace Yose.World2
+﻿namespace Yose.World2.ApiChallenges
 {
     public class PrimeFactorsEndpoint
     {

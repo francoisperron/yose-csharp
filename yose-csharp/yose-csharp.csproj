@@ -74,11 +74,17 @@
     <Compile Include="World1\AliveResponse.cs" />
     <Compile Include="World1\LandingPageNancyEndpoint.cs" />
     <Compile Include="World2\PrimeFactors.cs" />
-    <Compile Include="World2\PrimeFactorsDecomposition.cs" />
-    <Compile Include="World2\PrimeFactorsEndpoint.cs" />
-    <Compile Include="World2\PrimeFactorsError.cs" />
-    <Compile Include="World2\PrimeFactorsFormNancyEndpoint.cs" />
-    <Compile Include="World2\PrimeFactorsNancyEndpoint.cs" />
+    <Compile Include="World2\ApiChallenges\PrimeFactorsDecomposition.cs" />
+    <Compile Include="World2\ApiChallenges\PrimeFactorsEndpoint.cs" />
+    <Compile Include="World2\ApiChallenges\PrimeFactorsError.cs" />
+    <Compile Include="World2\UiChallenges\DecompositionResult.cs" />
+    <Compile Include="World2\UiChallenges\IPrimeFactorsResult.cs" />
+    <Compile Include="World2\UiChallenges\NegativeNumberResult.cs" />
+    <Compile Include="World2\UiChallenges\NotANumberResult.cs" />
+    <Compile Include="World2\UiChallenges\PrimeFactorsFormEndpoint.cs" />
+    <Compile Include="World2\ApiChallenges\PrimeFactorsNancyEndpoint.cs" />
+    <Compile Include="World2\UiChallenges\PrimeFactorsResultFactory.cs" />
+    <Compile Include="World2\UiChallenges\TooBigNumberResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

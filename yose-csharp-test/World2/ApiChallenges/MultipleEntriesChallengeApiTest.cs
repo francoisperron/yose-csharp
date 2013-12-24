@@ -4,7 +4,7 @@ using RestSharp;
 using Yose.TestHelpers;
 using Yose.Web;
 
-namespace Yose.World2
+namespace Yose.World2.ApiChallenges
 {
     class MultipleEntriesChallengeApiTest : ServerTest
     {

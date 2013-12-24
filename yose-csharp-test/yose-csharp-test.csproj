@@ -71,11 +71,11 @@
     <Compile Include="World1\LandingPageChallengeWebTest.cs" />
     <Compile Include="World1\PingChallengeApiTest.cs" />
     <Compile Include="World1\ShareChallengeWebTest.cs" />
-    <Compile Include="World2\DisplayResultsChallengeWebTest.cs" />
-    <Compile Include="World2\FormChallengeWebTest.cs" />
-    <Compile Include="World2\GuardChallengesTest.cs" />
-    <Compile Include="World2\MultipleEntriesChallengeApiTest.cs" />
-    <Compile Include="World2\PowerOfTwoChallengeApiTest.cs" />
+    <Compile Include="World2\UiChallenges\DisplayResultsChallengeWebTest.cs" />
+    <Compile Include="World2\UiChallenges\FormChallengeWebTest.cs" />
+    <Compile Include="World2\ApiChallenges\GuardChallengesTest.cs" />
+    <Compile Include="World2\ApiChallenges\MultipleEntriesChallengeApiTest.cs" />
+    <Compile Include="World2\ApiChallenges\PowerOfTwoChallengeApiTest.cs" />
     <Compile Include="World2\PrimeFactorsTest.cs" />
   </ItemGroup>
   <ItemGroup>

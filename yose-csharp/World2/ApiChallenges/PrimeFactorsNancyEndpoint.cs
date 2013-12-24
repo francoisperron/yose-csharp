@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using Nancy;
 
-namespace Yose.World2
+namespace Yose.World2.ApiChallenges
 {
     public class PrimeFactorsNancyEndpoint : NancyModule
     {

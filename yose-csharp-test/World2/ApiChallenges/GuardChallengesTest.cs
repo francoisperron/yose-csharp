@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace Yose.World2
+namespace Yose.World2.ApiChallenges
 {
     class GuardChallengesTest
     {

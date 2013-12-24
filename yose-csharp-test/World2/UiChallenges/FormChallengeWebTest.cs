@@ -2,7 +2,7 @@ using NUnit.Framework;
 using SimpleBrowser;
 using Yose.TestHelpers;
 
-namespace Yose.World2
+namespace Yose.World2.UiChallenges
 {
     class FormChallengeWebTest : ServerTest
     {
