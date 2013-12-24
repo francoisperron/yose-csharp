@@ -24,11 +24,19 @@ namespace Yose.World2
         }
 
         [Test]
-        public void DisplaysErrorMessage()
+        public void DisplaysTooBigErrorMessage()
         {
             browser.Find("number").Value = "1000001";
             browser.Find("go").Click();
             Assert.That(browser.Find("result").Value, Is.EqualTo("too big number (>1e6)"));
+        }
+
+        [Test]
+        public void DisplaysNotANumberErrorMessage()
+        {
+            browser.Find("number").Value = "hello";
+            browser.Find("go").Click();
+            Assert.That(browser.Find("result").Value, Is.EqualTo("hello is not a number"));
         }
     }
 }

@@ -15,20 +15,34 @@ namespace Yose.World2
     {
         public PrimeFactorsResultNancyEndpoint()
         {
-            Get["/primeFactors/result"] = _ =>
-            {
-                var result = new PrimeFactorsEndpoint().Get(Request.Query.number);
-                dynamic response;
-                if (result is PrimeFactorsError)
-                {
-                    response = result.error;
-                }
-                else
-                {
-                    response = Request.Query.number + " = " + String.Join(" x ", result.decomposition.ToArray());    
-                }                
-                return View["primeFactorsResult.html", response];
-            };
+            Get["/primeFactors/result"] = Answer;
         }
+
+        private object Answer(dynamic parameters)
+        {
+            int number;
+            if (IsNotANumber(Request.Query.number, out number))
+            {
+                return View["primeFactorsResult.html",  Request.Query.number + " is not a number"];
+            }
+
+            if (IsTooBig(number))
+            {
+                return View["primeFactorsResult.html", "too big number (>1e6)"];
+            }
+            
+            var decomposition = PrimeFactors.Of(number);
+            return View["primeFactorsResult.html", Request.Query.number + " = " + String.Join(" x ", decomposition.ToArray())];
+        }
+
+        private static bool IsNotANumber(string request, out int number)
+        {
+            return !int.TryParse(request, out number);
+        }
+
+        private static bool IsTooBig(int number)
+        {
+            return number > 1000000;
+        }   
     }
 }
