@@ -13,7 +13,7 @@ namespace Yose.World2.ApiChallenges
         {
             var intNumber = Convert.ToInt32(number);
             var decomposition = PrimeFactors.Of(intNumber);
-            return new PrimeFactorsDecomposition { number = intNumber, decomposition = decomposition };
+            return new PrimeFactorsApiResult { number = intNumber, decomposition = decomposition };
         }
     }
 }

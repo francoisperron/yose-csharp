@@ -8,14 +8,14 @@ namespace Yose.World2.ApiChallenges
 {
     class MultipleEntriesChallengeApiTest : ServerTest
     {
-        private IRestResponse<List<PrimeFactorsDecomposition>> response;
+        private IRestResponse<List<PrimeFactorsApiResult>> response;
 
         [TestFixtureSetUp]
         public void RequestingTwoPrimeFactors()
         {
             var restClient = new RestClient(Server.Uri);
             var request = new RestRequest("/primeFactors?number=4&number=15", Method.GET) { RequestFormat = DataFormat.Json };
-            response = restClient.Execute<List<PrimeFactorsDecomposition>>(request);  
+            response = restClient.Execute<List<PrimeFactorsApiResult>>(request);  
         }
 
         [Test]

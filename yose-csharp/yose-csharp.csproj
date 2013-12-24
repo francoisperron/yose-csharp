@@ -79,8 +79,7 @@
     <Compile Include="World2\ApiChallenges\PrimeFactorsApiResultFactory.cs" />
     <Compile Include="World2\ApiChallenges\TooBigNumberApiResult.cs" />
     <Compile Include="World2\PrimeFactors.cs" />
-    <Compile Include="World2\ApiChallenges\PrimeFactorsDecomposition.cs" />
-    <Compile Include="World2\ApiChallenges\PrimeFactorsError.cs" />
+    <Compile Include="World2\ApiChallenges\PrimeFactorsApiResult.cs" />
     <Compile Include="World2\UiChallenges\DecompositionResult.cs" />
     <Compile Include="World2\UiChallenges\IPrimeFactorsResult.cs" />
     <Compile Include="World2\UiChallenges\NegativeNumberResult.cs" />

@@ -9,7 +9,7 @@ namespace Yose.World2.ApiChallenges
 {
     class PowerOfTwoChallengeApiTest : ServerTest
     {
-        private IRestResponse<PrimeFactorsDecomposition> response;
+        private IRestResponse<PrimeFactorsApiResult> response;
         private const int Number = 16;
 
         [TestFixtureSetUp]
@@ -17,7 +17,7 @@ namespace Yose.World2.ApiChallenges
         {
             var restClient = new RestClient(Server.Uri);
             var request = new RestRequest(string.Format("/primeFactors?number={0}", Number), Method.GET) { RequestFormat = DataFormat.Json };
-            response = restClient.Execute<PrimeFactorsDecomposition>(request);
+            response = restClient.Execute<PrimeFactorsApiResult>(request);
         }
 
         [Test]

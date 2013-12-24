@@ -11,7 +11,7 @@ namespace Yose.World2.ApiChallenges
 
         public object Response(string number)
         {
-            return new PrimeFactorsError { number = number, error = "too big number (>1e6)" };
+            return new PrimeFactorsApiResult { number = number, error = "too big number (>1e6)" };
         }
     }
 }

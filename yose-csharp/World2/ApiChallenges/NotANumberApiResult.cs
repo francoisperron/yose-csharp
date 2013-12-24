@@ -10,7 +10,7 @@
 
         public object Response(string number)
         {
-            return new PrimeFactorsError { number = number, error = "not a number" };
+            return new PrimeFactorsApiResult { number = number, error = "not a number" };
         }
     }
 }
