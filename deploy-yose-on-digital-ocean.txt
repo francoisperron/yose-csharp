@@ -1,0 +1,11 @@
+create droplet
+log in root
+apt-get install mono-complete git
+git clone https://github.com/francoisperron/yose-csharp.git
+
+setup-certificates.sh
+
+xbuild /p:Configuration:Release
+mono yose-csharp.exe
+
+
